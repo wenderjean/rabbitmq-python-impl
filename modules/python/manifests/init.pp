@@ -11,4 +11,9 @@ class python {
     command => 'pip install pika==0.9.8',
     require => Package['python-pip']
   }
+
+  exec { 'install celery':
+    command => 'pip install celery',
+    require => Package['python-pip']
+  }
 }
