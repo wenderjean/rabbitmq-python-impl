@@ -9,8 +9,7 @@ You'll find two directories:
 ``app/tasks/``
 
 Files available in /pure directory implements just the message broadcast.<br/>
-:x
-:x
+Files available in /task directory implements an example using Celery to queue tasks.
 
 ## Dependencies
 
