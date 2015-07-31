@@ -1,15 +1,16 @@
 # RabbitMQ Python Implementation
 
-This is a python implementation of RabbitMQ lifecycle, this project was based in tutorial available
-in RabbitMQ page with some improvements.
+This is a python implementation of RabbitMQ lifecycle, faking a distributed environment talking one each other by
+messages, this project was based in tutorial available in RabbitMQ page as well as Celery documentation.
 
 You'll find two directories:
 
 ``app/pure/``<br/>
 ``app/tasks/``
 
-Files available in /pure directory implements just the message broadcast.
-Files available in /tasks is a implementation using celery to manager tasks.
+Files available in /pure directory implements just the message broadcast.<br/>
+:x
+:x
 
 ## Dependencies
 
@@ -21,6 +22,7 @@ Files available in /tasks is a implementation using celery to manager tasks.
 ``vagrant ssh producer``<br/>
 ``vagrant ssh rabbit``<br/>
 ``vagrant ssh consumer``<br/>
+``vagrant ssh redis``<br/>
 
 ## Testing /pure
 
@@ -36,4 +38,4 @@ In 'producer' machine run:
 ``python producer.py``
 
 In 'consumer' machine run:
-``celery -A tasks worker --loglevel=info``
+``sh start.sh`` OR ``celery -A tasks worker --loglevel=info``

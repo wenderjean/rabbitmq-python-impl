@@ -5,5 +5,9 @@ class base {
   }
 
   Exec['apt-get update'] -> Package <| |>
+
+  package { 'curl':
+    ensure => installed
+  }
 }
 

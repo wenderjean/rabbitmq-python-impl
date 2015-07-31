@@ -1,4 +1,6 @@
 class python {
+  include base
+
   package { 'python-pip':
     ensure => 'present'
   }
@@ -14,6 +16,11 @@ class python {
 
   exec { 'install celery':
     command => 'pip install celery',
+    require => Package['python-pip']
+  }
+
+  exec { 'install redis-lib':
+    command => 'pip install -U redis',
     require => Package['python-pip']
   }
 }

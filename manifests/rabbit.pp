@@ -3,5 +3,4 @@ Exec {
   user => "root"
 }
 
-include base
 include rabbitmq
